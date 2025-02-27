@@ -1,0 +1,13 @@
+---
+- name: remove httpd package
+  hosts: webservers
+  become: true
+  tasks:
+    - name: start the service
+      service:
+        name: httpd
+        state: stopped
+ 
+
+
+
